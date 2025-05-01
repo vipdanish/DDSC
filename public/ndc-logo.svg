@@ -4,4 +4,6 @@
   <path d="M140 40L100 20L140 0V40Z" fill="#0066FF"/>
   <path d="M60 160L100 180L60 200V160Z" fill="#0066FF"/>
   <path d="M140 160L100 180L140 200V160Z" fill="#00CC66"/>
+  <path d="M150 80L100 100L150 120V80Z" fill="#FF4D4D"/>
+  <path d="M50 80L100 100L50 120V80Z" fill="#00CC66"/>
 </svg>

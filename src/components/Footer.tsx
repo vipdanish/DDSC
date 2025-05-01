@@ -1,56 +1,127 @@
 
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, ExternalLink } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary py-16">
-      <div className="section-container">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
+    <footer className="relative bg-secondary pt-16 pb-10 overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute top-0 left-1/4 w-60 h-60 rounded-full bg-ndc-purple/30 blur-[100px]"></div>
+        <div className="absolute bottom-0 right-1/4 w-60 h-60 rounded-full bg-ndc-blue/30 blur-[100px]"></div>
+      </div>
+      
+      <div className="section-container relative z-10">
+        <div className="grid md:grid-cols-3 gap-12">
+          <div className="space-y-6">
             <div className="flex items-center mb-4">
-              <img src="/ndc-logo.svg" alt="NDC Logo" className="h-10 w-auto" />
-              <span className="ml-3 text-xl font-bold text-white">NextGen Developer Club</span>
+              <img src="/lovable-uploads/39c21d43-126d-4494-81a1-86721a1dc1e7.png" alt="NDC Logo" className="h-12 w-auto mr-3" />
+              <div>
+                <h3 className="text-xl font-bold text-white">NextGen</h3>
+                <h4 className="text-lg font-medium text-white/80">Developer Club</h4>
+              </div>
             </div>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-300">
               Empowering students through technology, innovation, and community.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-background/30 hover:bg-ndc-purple/20 p-2 rounded-full transition-colors">
+              <a href="#" className="bg-background/30 hover:bg-ndc-purple/20 p-2 rounded-full transition-all duration-300 hover:scale-110">
                 <Facebook className="h-5 w-5 text-white" />
               </a>
-              <a href="#" className="bg-background/30 hover:bg-ndc-purple/20 p-2 rounded-full transition-colors">
+              <a href="#" className="bg-background/30 hover:bg-ndc-blue/20 p-2 rounded-full transition-all duration-300 hover:scale-110">
                 <Twitter className="h-5 w-5 text-white" />
               </a>
-              <a href="#" className="bg-background/30 hover:bg-ndc-purple/20 p-2 rounded-full transition-colors">
+              <a href="#" className="bg-background/30 hover:bg-ndc-green/20 p-2 rounded-full transition-all duration-300 hover:scale-110">
                 <Instagram className="h-5 w-5 text-white" />
               </a>
-              <a href="#" className="bg-background/30 hover:bg-ndc-purple/20 p-2 rounded-full transition-colors">
+              <a href="#" className="bg-background/30 hover:bg-ndc-purple/20 p-2 rounded-full transition-all duration-300 hover:scale-110">
                 <Linkedin className="h-5 w-5 text-white" />
               </a>
             </div>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="#about" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#why-join" className="text-gray-300 hover:text-white transition-colors">Why Join</a></li>
-              <li><a href="#events" className="text-gray-300 hover:text-white transition-colors">Events</a></li>
-              <li><a href="#team" className="text-gray-300 hover:text-white transition-colors">Our Team</a></li>
-              <li><a href="#join" className="text-gray-300 hover:text-white transition-colors">Join the Club</a></li>
+            <h3 className="text-lg font-bold mb-6 relative inline-block after:content-[''] after:block after:w-full after:h-0.5 after:bg-gradient-to-r after:from-ndc-purple after:to-ndc-blue">Quick Links</h3>
+            <ul className="grid grid-cols-2 gap-4">
+              <li>
+                <a href="#about" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <span className="w-0 h-px bg-ndc-purple group-hover:w-3 transition-all duration-300"></span>
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#why-join" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <span className="w-0 h-px bg-ndc-blue group-hover:w-3 transition-all duration-300"></span>
+                  Why Join
+                </a>
+              </li>
+              <li>
+                <a href="#benefits" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <span className="w-0 h-px bg-ndc-green group-hover:w-3 transition-all duration-300"></span>
+                  Benefits
+                </a>
+              </li>
+              <li>
+                <a href="#events" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <span className="w-0 h-px bg-ndc-purple group-hover:w-3 transition-all duration-300"></span>
+                  Events
+                </a>
+              </li>
+              <li>
+                <a href="#team" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <span className="w-0 h-px bg-ndc-blue group-hover:w-3 transition-all duration-300"></span>
+                  Our Team
+                </a>
+              </li>
+              <li>
+                <a href="#partners" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <span className="w-0 h-px bg-ndc-green group-hover:w-3 transition-all duration-300"></span>
+                  Partners
+                </a>
+              </li>
+              <li>
+                <a href="#join" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <span className="w-0 h-px bg-ndc-purple group-hover:w-3 transition-all duration-300"></span>
+                  Join Us
+                </a>
+              </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="text-gray-300">
-                <span className="block text-ndc-blue">Email</span>
-                <a href="mailto:contact@ndclub.com" className="hover:text-white transition-colors">contact@ndclub.com</a>
+            <h3 className="text-lg font-bold mb-6 relative inline-block after:content-[''] after:block after:w-full after:h-0.5 after:bg-gradient-to-r after:from-ndc-blue after:to-ndc-green">Contact Us</h3>
+            <ul className="space-y-5">
+              <li className="group">
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="p-2 rounded-full bg-background/30 group-hover:bg-ndc-blue/20 transition-colors">
+                    <Mail className="h-4 w-4 text-ndc-blue" />
+                  </div>
+                  <span className="font-medium text-white/90">Email</span>
+                </div>
+                <a href="mailto:contact@ndclub.com" className="text-gray-300 hover:text-white transition-colors ml-11 block">
+                  contact@ndclub.com
+                </a>
               </li>
-              <li className="text-gray-300">
-                <span className="block text-ndc-blue">Location</span>
-                Shri Shivaji Institute of Engineering and Management Studies
+              <li className="group">
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="p-2 rounded-full bg-background/30 group-hover:bg-ndc-green/20 transition-colors">
+                    <MapPin className="h-4 w-4 text-ndc-green" />
+                  </div>
+                  <span className="font-medium text-white/90">Location</span>
+                </div>
+                <p className="text-gray-300 ml-11">
+                  Shri Shivaji Institute of Engineering and Management Studies
+                </p>
+              </li>
+              <li className="group">
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="p-2 rounded-full bg-background/30 group-hover:bg-ndc-purple/20 transition-colors">
+                    <ExternalLink className="h-4 w-4 text-ndc-purple" />
+                  </div>
+                  <span className="font-medium text-white/90">Website</span>
+                </div>
+                <a href="https://ssiems.edu.in" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors ml-11 block">
+                  ssiems.edu.in
+                </a>
               </li>
             </ul>
           </div>
