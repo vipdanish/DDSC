@@ -1,29 +1,31 @@
 
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: "Your Name",
-      role: "Club Leader",
-      photo: "/leader-photo.jpg",
-      bio: "Leading the NextGen Developer Club with passion for technology and community building."
-    },
-    {
-      name: "Jane Smith",
+      name: "John Doe",
       role: "Technical Lead",
-      photo: "/placeholder.svg",
+      initials: "JD",
       bio: "Expert in full-stack development and mentoring new developers."
     },
     {
-      name: "Mike Johnson",
+      name: "Sarah Lee",
       role: "Events Coordinator",
-      photo: "/placeholder.svg",
+      initials: "SL",
       bio: "Organizing impactful tech events and building community partnerships."
     },
     {
-      name: "Sarah Lee",
+      name: "Alex Chen",
       role: "Content Lead",
-      photo: "/placeholder.svg",
+      initials: "AC",
       bio: "Creating engaging technical content and documentation for the club."
+    },
+    {
+      name: "Priya Sharma",
+      role: "Outreach Coordinator",
+      initials: "PS",
+      bio: "Managing partnerships and external relationships with the tech community."
     }
   ];
 
@@ -42,15 +44,12 @@ const TeamSection = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
             <div key={index} className="glass-card p-6 text-center group">
-              <div className="relative w-40 h-40 mx-auto mb-6 overflow-hidden rounded-full">
-                <img 
-                  src={member.photo} 
-                  alt={member.name}
-                  className="w-full h-full object-cover transition-transform group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
-                  <span className="text-white text-sm font-medium">Connect</span>
-                </div>
+              <div className="relative w-24 h-24 mx-auto mb-6 overflow-hidden rounded-full">
+                <Avatar className="w-24 h-24 bg-gradient-to-br from-ndc-purple to-ndc-blue">
+                  <AvatarFallback className="text-xl font-bold">
+                    {member.initials}
+                  </AvatarFallback>
+                </Avatar>
               </div>
               <h3 className="text-xl font-bold mb-1">{member.name}</h3>
               <p className="text-ndc-purple font-medium mb-3">{member.role}</p>

@@ -1,13 +1,7 @@
 
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="40" height="40" rx="8" fill="url(#paint0_linear_1_2)"/>
-  <path d="M10 14L15 10V30L10 26V14Z" fill="white"/>
-  <path d="M17 10H22L27 30H22L17 10Z" fill="white"/>
-  <path d="M30 14L35 10V30L30 26V14Z" fill="white"/>
-  <defs>
-    <linearGradient id="paint0_linear_1_2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#8B5CF6"/>
-      <stop offset="1" stop-color="#0EA5E9"/>
-    </linearGradient>
-  </defs>
+<svg width="40" height="40" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M60 40L100 20L60 0V40Z" fill="#FF4D4D"/>
+  <path d="M140 40L100 20L140 0V40Z" fill="#0066FF"/>
+  <path d="M60 160L100 180L60 200V160Z" fill="#0066FF"/>
+  <path d="M140 160L100 180L140 200V160Z" fill="#00CC66"/>
 </svg>
