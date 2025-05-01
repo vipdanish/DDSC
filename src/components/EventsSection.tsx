@@ -1,6 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
 import {
   Card,
   CardContent,
@@ -13,11 +12,11 @@ import {
 const EventsSection = () => {
   const events = [
     {
-      title: "Web Development Bootcamp",
-      date: "June 15, 2023",
-      time: "10:00 AM - 3:00 PM",
-      location: "Tech Lab, Building B",
-      description: "Learn modern web development with React and Node.js from industry experts."
+      title: "NextGen Developer Club Launch Event",
+      date: "June 10, 2025",
+      time: "11:00 AM - 2:00 PM",
+      location: "Main Campus Auditorium",
+      description: "Join us for the official launch of NextGen Developer Club with special guests, networking, and tech demos."
     },
     {
       title: "Cloud Computing Workshop",
@@ -49,7 +48,7 @@ const EventsSection = () => {
 
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           {events.map((event, index) => (
-            <Card key={index} className="bg-background border border-white/10 overflow-hidden">
+            <Card key={index} className={`bg-background border border-white/10 overflow-hidden hover:transform hover:scale-105 transition-all duration-300 ${index === 0 ? 'border-l-4 border-l-ndc-purple' : ''}`}>
               <div className="h-3 bg-gradient-to-r from-ndc-purple to-ndc-blue"></div>
               <CardHeader>
                 <CardTitle className="text-xl font-bold">{event.title}</CardTitle>
@@ -69,7 +68,7 @@ const EventsSection = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <Button variant="outline" className="btn-outline">
+          <Button variant="outline" className="btn-outline hover:scale-105 transition-transform">
             View All Events
           </Button>
         </div>

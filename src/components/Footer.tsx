@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12">
           <div className="space-y-6 animate-fade-in">
             <div className="flex items-center mb-4">
-              <img src="/lovable-uploads/8f2aac09-11e4-414a-929d-997fd9338097.png" alt="NDC Logo" className="h-12 w-auto mr-3" />
+              <img src="/lovable-uploads/1cf4c0d1-cdfb-4d0a-9466-63096565f5d4.png" alt="NDC Logo" className="h-12 w-auto mr-3" />
               <div>
                 <h3 className="text-xl font-bold text-white">NextGen</h3>
                 <h4 className="text-lg font-medium text-white/80">Developer Club</h4>

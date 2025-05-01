@@ -32,7 +32,7 @@ const HeroSection = () => {
 
       <div className="section-container relative z-10">
         <div className="flex flex-col items-center text-center">
-          <img src="/lovable-uploads/8f2aac09-11e4-414a-929d-997fd9338097.png" alt="NDC Logo" className="h-28 w-auto mb-8 animate-float" />
+          <img src="/lovable-uploads/1cf4c0d1-cdfb-4d0a-9466-63096565f5d4.png" alt="NDC Logo" className="h-28 w-auto mb-8 animate-float" />
           <h1 className="heading-lg mb-6 animate-fade-in">
             Open Minds, <span className="gradient-text">Open Code.</span>
             <br />

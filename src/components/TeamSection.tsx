@@ -1,31 +1,32 @@
 
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: "John Doe",
+      name: "Syed Rayyan",
+      role: "Community Leader",
+      initials: "SR",
+      bio: "Leading the NextGen Developer Club community initiatives and growth.",
+      image: "/lovable-uploads/0a894d06-59ec-435e-b30a-bab2549d95d9.png"
+    },
+    {
+      name: "Mohamad Ardeb",
+      role: "Graphic Designer",
+      initials: "MA",
+      bio: "Creating visual identity and designs for the club's digital and print materials."
+    },
+    {
+      name: "Mohammad Zoheb",
+      role: "Social Media Expert",
+      initials: "MZ",
+      bio: "Managing the club's online presence and community engagement strategies."
+    },
+    {
+      name: "Vedant Thombre",
       role: "Technical Lead",
-      initials: "JD",
-      bio: "Expert in full-stack development and mentoring new developers."
-    },
-    {
-      name: "Sarah Lee",
-      role: "Events Coordinator",
-      initials: "SL",
-      bio: "Organizing impactful tech events and building community partnerships."
-    },
-    {
-      name: "Alex Chen",
-      role: "Content Lead",
-      initials: "AC",
-      bio: "Creating engaging technical content and documentation for the club."
-    },
-    {
-      name: "Priya Sharma",
-      role: "Outreach Coordinator",
-      initials: "PS",
-      bio: "Managing partnerships and external relationships with the tech community."
+      initials: "VT",
+      bio: "Overseeing technical projects and guiding members on development practices."
     }
   ];
 
@@ -43,9 +44,12 @@ const TeamSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
-            <div key={index} className="glass-card p-6 text-center group">
+            <div key={index} className="glass-card p-6 text-center group hover:transform hover:scale-105 transition-all duration-300">
               <div className="relative w-24 h-24 mx-auto mb-6 overflow-hidden rounded-full">
                 <Avatar className="w-24 h-24 bg-gradient-to-br from-ndc-purple to-ndc-blue">
+                  {member.image ? (
+                    <AvatarImage src={member.image} alt={member.name} />
+                  ) : null}
                   <AvatarFallback className="text-xl font-bold">
                     {member.initials}
                   </AvatarFallback>

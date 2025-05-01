@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center gap-3">
-            <img src="/lovable-uploads/8f2aac09-11e4-414a-929d-997fd9338097.png" alt="NDC Logo" className="h-10 w-auto" />
+            <img src="/lovable-uploads/1cf4c0d1-cdfb-4d0a-9466-63096565f5d4.png" alt="NDC Logo" className="h-10 w-auto animate-pulse-slow" />
             <span className="text-xl font-bold text-white">NextGen Developer Club</span>
           </div>
           <nav className="hidden md:flex items-center space-x-8">

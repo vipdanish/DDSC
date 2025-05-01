@@ -1,9 +1,7 @@
 
-<svg width="40" height="40" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M60 40L100 20L60 0V40Z" fill="#FF4D4D"/>
-  <path d="M140 40L100 20L140 0V40Z" fill="#0066FF"/>
-  <path d="M60 160L100 180L60 200V160Z" fill="#0066FF"/>
-  <path d="M140 160L100 180L140 200V160Z" fill="#00CC66"/>
-  <path d="M150 80L100 100L150 120V80Z" fill="#FF4D4D"/>
-  <path d="M50 80L100 100L50 120V80Z" fill="#00CC66"/>
+<svg width="200" height="200" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M228 228L128 328L228 428" stroke="#FF5733" stroke-width="60" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M572 228L672 328L572 428" stroke="#3498DB" stroke-width="60" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M228 572L128 472L228 372" stroke="#3498DB" stroke-width="60" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M572 572L672 472L572 372" stroke="#2ECC71" stroke-width="60" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
