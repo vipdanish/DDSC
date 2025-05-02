@@ -8,7 +8,9 @@ import EventsSection from '@/components/EventsSection';
 import TeamSection from '@/components/TeamSection';
 import JoinSection from '@/components/JoinSection';
 import PartnersSection from '@/components/PartnersSection';
+import RoadmapSection from '@/components/RoadmapSection';
 import Footer from '@/components/Footer';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 const Index = () => {
   return (
@@ -19,10 +21,12 @@ const Index = () => {
       <WhyJoinSection />
       <BenefitsSection />
       <EventsSection />
+      <RoadmapSection />
       <TeamSection />
       <PartnersSection />
       <JoinSection />
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 };

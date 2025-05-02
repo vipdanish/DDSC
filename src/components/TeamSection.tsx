@@ -51,7 +51,7 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="team" className="py-20">
+    <section id="team" className={`py-20 ${theme === 'light' ? 'bg-white' : ''}`}>
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="heading-md mb-6">Our <span className="gradient-text">Core Team</span></h2>
@@ -64,7 +64,15 @@ const TeamSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
-            <div key={index} className={`${theme === 'light' ? 'bg-white/90 shadow-lg border border-gray-100' : 'glass-card'} p-6 text-center group hover:transform hover:scale-105 transition-all duration-300 animate-fade-in`} style={{animationDelay: `${index * 100}ms`}}>
+            <div 
+              key={index} 
+              className={`${
+                theme === 'light' 
+                  ? 'bg-white shadow-lg border border-gray-100' 
+                  : 'glass-card'
+              } p-6 text-center group hover:transform hover:scale-105 transition-all duration-300 animate-fade-in rounded-lg`} 
+              style={{animationDelay: `${index * 100}ms`}}
+            >
               <div className="relative w-24 h-24 mx-auto mb-6 overflow-hidden rounded-full">
                 <Avatar className="w-24 h-24 bg-gradient-to-br from-ndc-purple to-ndc-blue">
                   {member.image ? (
