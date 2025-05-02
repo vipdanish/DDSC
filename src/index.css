@@ -7,6 +7,29 @@
 
 @layer base {
   :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 263 85% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 192 85% 48%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 250 95% 76.9%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
@@ -26,11 +49,10 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 250 95% 76.9%;
-    --radius: 0.75rem;
   }
 
   * {
-    @apply border-border selection:bg-primary/20 selection:text-white;
+    @apply border-border selection:bg-primary/20 selection:text-foreground;
   }
   
   body {
@@ -73,11 +95,11 @@
   }
 
   .btn-secondary {
-    @apply bg-secondary hover:bg-secondary/80 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300;
+    @apply bg-secondary hover:bg-secondary/80 text-secondary-foreground font-medium px-6 py-3 rounded-lg transition-all duration-300;
   }
   
   .btn-outline {
-    @apply border border-ndc-purple/50 hover:border-ndc-purple text-white font-medium px-6 py-3 rounded-lg transition-all duration-300;
+    @apply border border-ndc-purple/50 hover:border-ndc-purple text-foreground font-medium px-6 py-3 rounded-lg transition-all duration-300;
   }
 }
 
@@ -116,4 +138,3 @@
 .animate-slide-slow {
   animation: slide-slow 20s linear infinite;
 }
-
