@@ -11,21 +11,21 @@ const TeamSection = () => {
       role: "Community Leader",
       initials: "SD",
       bio: "Leading the NextGen Developer Club community initiatives and growth.",
-      image: "/lovable-uploads/a962026c-ed9f-4509-9ff7-86ec7bad35d9.png"
+      image: "/lovable-uploads/37e91a02-fe41-4401-801a-8bafaf180aca.png"
     },
     {
       name: "Syed Rayyan",
       role: "Co-Leader",
       initials: "SR",
       bio: "Supporting community leadership and helping drive club initiatives forward.",
-      image: "/lovable-uploads/12c566a4-43cf-44b6-96e4-042747b9d5e9.png"
+      image: "/lovable-uploads/31650158-cb9b-4eb6-8546-bfc58d52840d.png"
     },
     {
       name: "Shaikh Sohel",
       role: "Management Head (Founder of Profolio)",
       initials: "SS",
       bio: "Overseeing operational management and strategic planning for the club.",
-      image: "/lovable-uploads/f3a2435e-2f6a-4d14-b554-6a646ba87097.png"
+      image: "/lovable-uploads/44bb75de-d18b-454e-9687-e0c620b55c69.png"
     },
     {
       name: "Salman Shaikh",
@@ -45,7 +45,8 @@ const TeamSection = () => {
       name: "Vedant Thombre",
       role: "Technical Lead",
       initials: "VT",
-      bio: "Overseeing technical projects and guiding members on development practices."
+      bio: "Overseeing technical projects and guiding members on development practices.",
+      image: "/lovable-uploads/c1b6a28e-d166-4a71-a4ff-b747968361b2.png"
     }
   ];
 
