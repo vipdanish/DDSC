@@ -4,23 +4,35 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: "Syed Rayyan",
+      name: "Syed Danish",
       role: "Community Leader",
-      initials: "SR",
+      initials: "SD",
       bio: "Leading the NextGen Developer Club community initiatives and growth.",
       image: "/lovable-uploads/0a894d06-59ec-435e-b30a-bab2549d95d9.png"
     },
     {
-      name: "Mohamad Ardeb",
+      name: "Syed Rayyan",
+      role: "Co-Leader",
+      initials: "SR",
+      bio: "Supporting community leadership and helping drive club initiatives forward."
+    },
+    {
+      name: "Shaikh Sohel",
+      role: "Management Head (Founder of Profolio)",
+      initials: "SS",
+      bio: "Overseeing operational management and strategic planning for the club."
+    },
+    {
+      name: "Salman Shaikh",
+      role: "GDG Lead, PES College Aurangabad",
+      initials: "SS",
+      bio: "Bringing Google Developer Group expertise to support our technical community."
+    },
+    {
+      name: "Mohammad Areeb",
       role: "Graphic Designer",
       initials: "MA",
       bio: "Creating visual identity and designs for the club's digital and print materials."
-    },
-    {
-      name: "Mohammad Zoheb",
-      role: "Social Media Expert",
-      initials: "MZ",
-      bio: "Managing the club's online presence and community engagement strategies."
     },
     {
       name: "Vedant Thombre",
@@ -42,7 +54,7 @@ const TeamSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <div key={index} className="glass-card p-6 text-center group hover:transform hover:scale-105 transition-all duration-300">
               <div className="relative w-24 h-24 mx-auto mb-6 overflow-hidden rounded-full">
