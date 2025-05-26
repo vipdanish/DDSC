@@ -1,9 +1,16 @@
 
-import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, ExternalLink } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, ExternalLink, Heart } from "lucide-react";
+import { useTheme } from "@/hooks/use-theme";
 
 const Footer = () => {
+  const { theme } = useTheme();
+  
   return (
-    <footer className="relative bg-secondary pt-16 pb-10 overflow-hidden">
+    <footer className={`relative pt-16 pb-10 overflow-hidden ${
+      theme === 'light' 
+        ? 'bg-gradient-to-br from-gray-900 to-blue-900' 
+        : 'bg-secondary'
+    }`}>
       {/* Background elements with improved animations */}
       <div className="absolute inset-0 z-0 opacity-20">
         <div className="absolute top-0 left-1/4 w-60 h-60 rounded-full bg-ndc-purple/30 blur-[100px] animate-pulse-slow"></div>
@@ -12,126 +19,133 @@ const Footer = () => {
       </div>
       
       <div className="section-container relative z-10">
-        <div className="grid md:grid-cols-3 gap-12">
-          <div className="space-y-6 animate-fade-in">
-            <div className="flex items-center mb-4">
-              <img src="/lovable-uploads/1cf4c0d1-cdfb-4d0a-9466-63096565f5d4.png" alt="NDC Logo" className="h-12 w-auto mr-3" />
+        <div className="grid md:grid-cols-4 gap-12">
+          {/* Brand Section */}
+          <div className="md:col-span-2 space-y-6 animate-fade-in">
+            <div className="flex items-center mb-6">
+              <img src="/lovable-uploads/1cf4c0d1-cdfb-4d0a-9466-63096565f5d4.png" alt="NDC Logo" className="h-14 w-auto mr-4" />
               <div>
-                <h3 className="text-xl font-bold text-white">NextGen</h3>
+                <h3 className="text-2xl font-bold text-white">NextGen</h3>
                 <h4 className="text-lg font-medium text-white/80">Developer Club</h4>
               </div>
             </div>
-            <p className="text-gray-300">
-              Empowering students through technology, innovation, and community.
+            <p className="text-gray-300 text-lg leading-relaxed max-w-md">
+              Empowering students through technology, innovation, and community. Join us in building the future of tech together.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-background/30 hover:bg-ndc-purple/20 p-2 rounded-full transition-all duration-300 hover:scale-110 hover:rotate-6">
-                <Facebook className="h-5 w-5 text-white" />
+              <a href="#" className="bg-white/10 hover:bg-ndc-purple/30 p-3 rounded-full transition-all duration-300 hover:scale-110 hover:rotate-6 group">
+                <Facebook className="h-5 w-5 text-white group-hover:text-ndc-purple" />
               </a>
-              <a href="#" className="bg-background/30 hover:bg-ndc-blue/20 p-2 rounded-full transition-all duration-300 hover:scale-110 hover:-rotate-6">
-                <Twitter className="h-5 w-5 text-white" />
+              <a href="#" className="bg-white/10 hover:bg-ndc-blue/30 p-3 rounded-full transition-all duration-300 hover:scale-110 hover:-rotate-6 group">
+                <Twitter className="h-5 w-5 text-white group-hover:text-ndc-blue" />
               </a>
-              <a href="#" className="bg-background/30 hover:bg-ndc-green/20 p-2 rounded-full transition-all duration-300 hover:scale-110 hover:rotate-6">
-                <Instagram className="h-5 w-5 text-white" />
+              <a href="#" className="bg-white/10 hover:bg-ndc-green/30 p-3 rounded-full transition-all duration-300 hover:scale-110 hover:rotate-6 group">
+                <Instagram className="h-5 w-5 text-white group-hover:text-ndc-green" />
               </a>
-              <a href="#" className="bg-background/30 hover:bg-ndc-purple/20 p-2 rounded-full transition-all duration-300 hover:scale-110 hover:-rotate-6">
-                <Linkedin className="h-5 w-5 text-white" />
+              <a href="#" className="bg-white/10 hover:bg-ndc-purple/30 p-3 rounded-full transition-all duration-300 hover:scale-110 hover:-rotate-6 group">
+                <Linkedin className="h-5 w-5 text-white group-hover:text-ndc-purple" />
               </a>
             </div>
           </div>
           
+          {/* Quick Links */}
           <div className="animate-fade-in" style={{ animationDelay: '200ms' }}>
-            <h3 className="text-lg font-bold mb-6 relative inline-block after:content-[''] after:block after:w-full after:h-0.5 after:bg-gradient-to-r after:from-ndc-purple after:to-ndc-blue">Quick Links</h3>
-            <ul className="grid grid-cols-2 gap-4">
-              <li>
-                <a href="#about" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <span className="w-0 h-px bg-ndc-purple group-hover:w-3 transition-all duration-300"></span>
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#why-join" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <span className="w-0 h-px bg-ndc-blue group-hover:w-3 transition-all duration-300"></span>
-                  Why Join
-                </a>
-              </li>
-              <li>
-                <a href="#benefits" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <span className="w-0 h-px bg-ndc-green group-hover:w-3 transition-all duration-300"></span>
-                  Benefits
-                </a>
-              </li>
-              <li>
-                <a href="#events" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <span className="w-0 h-px bg-ndc-purple group-hover:w-3 transition-all duration-300"></span>
-                  Events
-                </a>
-              </li>
-              <li>
-                <a href="#team" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <span className="w-0 h-px bg-ndc-blue group-hover:w-3 transition-all duration-300"></span>
-                  Our Team
-                </a>
-              </li>
-              <li>
-                <a href="#partners" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <span className="w-0 h-px bg-ndc-green group-hover:w-3 transition-all duration-300"></span>
-                  Partners
-                </a>
-              </li>
-              <li>
-                <a href="#join" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <span className="w-0 h-px bg-ndc-purple group-hover:w-3 transition-all duration-300"></span>
-                  Join Us
-                </a>
-              </li>
+            <h3 className="text-lg font-bold mb-6 text-white relative inline-block">
+              Quick Links
+              <div className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-ndc-purple to-ndc-blue"></div>
+            </h3>
+            <ul className="space-y-3">
+              {[
+                { name: 'About Us', href: '#about', color: 'ndc-purple' },
+                { name: 'Why Join', href: '#why-join', color: 'ndc-blue' },
+                { name: 'Benefits', href: '#benefits', color: 'ndc-green' },
+                { name: 'Our Team', href: '#team', color: 'ndc-purple' },
+                { name: 'Partners', href: '#partners', color: 'ndc-blue' },
+                { name: 'Join Us', href: '#join', color: 'ndc-green' }
+              ].map((link, index) => (
+                <li key={index}>
+                  <a 
+                    href={link.href} 
+                    className="text-gray-300 hover:text-white transition-all duration-300 flex items-center gap-2 group"
+                  >
+                    <span className={`w-0 h-px bg-${link.color} group-hover:w-4 transition-all duration-300`}></span>
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                      {link.name}
+                    </span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           
+          {/* Contact Info */}
           <div className="animate-fade-in" style={{ animationDelay: '400ms' }}>
-            <h3 className="text-lg font-bold mb-6 relative inline-block after:content-[''] after:block after:w-full after:h-0.5 after:bg-gradient-to-r after:from-ndc-blue after:to-ndc-green">Contact Us</h3>
-            <ul className="space-y-5">
+            <h3 className="text-lg font-bold mb-6 text-white relative inline-block">
+              Contact Us
+              <div className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-ndc-blue to-ndc-green"></div>
+            </h3>
+            <ul className="space-y-6">
               <li className="group">
-                <div className="flex items-center gap-3 mb-1">
-                  <div className="p-2 rounded-full bg-background/30 group-hover:bg-ndc-blue/20 transition-colors">
-                    <Mail className="h-4 w-4 text-ndc-blue" />
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-full bg-white/10 group-hover:bg-ndc-blue/20 transition-all duration-300 mt-1">
+                    <Mail className="h-5 w-5 text-ndc-blue" />
                   </div>
-                  <span className="font-medium text-white/90">Email</span>
+                  <div>
+                    <span className="font-medium text-white/90 block mb-1">Email</span>
+                    <a href="mailto:contact@ndclub.com" className="text-gray-300 hover:text-white transition-colors">
+                      contact@ndclub.com
+                    </a>
+                  </div>
                 </div>
-                <a href="mailto:contact@ndclub.com" className="text-gray-300 hover:text-white transition-colors ml-11 block">
-                  contact@ndclub.com
-                </a>
               </li>
               <li className="group">
-                <div className="flex items-center gap-3 mb-1">
-                  <div className="p-2 rounded-full bg-background/30 group-hover:bg-ndc-green/20 transition-colors">
-                    <MapPin className="h-4 w-4 text-ndc-green" />
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-full bg-white/10 group-hover:bg-ndc-green/20 transition-all duration-300 mt-1">
+                    <MapPin className="h-5 w-5 text-ndc-green" />
                   </div>
-                  <span className="font-medium text-white/90">Location</span>
+                  <div>
+                    <span className="font-medium text-white/90 block mb-1">Location</span>
+                    <p className="text-gray-300 leading-relaxed">
+                      Shri Shivaji Institute of Engineering and Management Studies
+                    </p>
+                  </div>
                 </div>
-                <p className="text-gray-300 ml-11">
-                  Shri Shivaji Institute of Engineering and Management Studies
-                </p>
               </li>
               <li className="group">
-                <div className="flex items-center gap-3 mb-1">
-                  <div className="p-2 rounded-full bg-background/30 group-hover:bg-ndc-purple/20 transition-colors">
-                    <ExternalLink className="h-4 w-4 text-ndc-purple" />
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-full bg-white/10 group-hover:bg-ndc-purple/20 transition-all duration-300 mt-1">
+                    <ExternalLink className="h-5 w-5 text-ndc-purple" />
                   </div>
-                  <span className="font-medium text-white/90">Website</span>
+                  <div>
+                    <span className="font-medium text-white/90 block mb-1">Website</span>
+                    <a href="https://ssiems.org.in" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                      ssiems.org.in
+                    </a>
+                  </div>
                 </div>
-                <a href="https://ssiems.org.in" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors ml-11 block">
-                  ssiems.org.in
-                </a>
               </li>
             </ul>
           </div>
         </div>
         
-        <div className="border-t border-white/10 mt-12 pt-8 text-center">
-          <p className="text-gray-400">
-            © {new Date().getFullYear()} NextGen Developer Club. All rights reserved.
-          </p>
+        {/* Bottom Section */}
+        <div className="border-t border-white/20 mt-16 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400 text-center md:text-left">
+              © {new Date().getFullYear()} NextGen Developer Club. All rights reserved.
+            </p>
+            <div className="flex items-center gap-2 text-gray-400">
+              <span>Made with</span>
+              <Heart className="h-4 w-4 text-red-500 animate-pulse" />
+              <span>by</span>
+              <span 
+                className="font-medium text-ndc-purple hover:text-ndc-blue cursor-pointer transition-colors"
+                onClick={() => window.open('https://okdanish.netlify.app/', '_blank')}
+              >
+                Danish
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
