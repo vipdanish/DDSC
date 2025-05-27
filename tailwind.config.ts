@@ -22,7 +22,6 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 				display: ['Space Grotesk', 'sans-serif'],
-				orbitron: ['Orbitron', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -102,27 +101,6 @@ export default {
 				'scale-in': {
 					'0%': { transform: 'scale(0.95)', opacity: '0' },
 					'100%': { transform: 'scale(1)', opacity: '1' }
-				},
-				'hologram': {
-					'0%, 100%': { 
-						opacity: '0.8',
-						transform: 'translateY(0) scale(1)',
-					},
-					'50%': { 
-						opacity: '1',
-						transform: 'translateY(-5px) scale(1.02)',
-					}
-				},
-				'particle-float': {
-					'0%, 100%': { 
-						transform: 'translateY(0) translateX(0) rotate(0deg)',
-					},
-					'33%': { 
-						transform: 'translateY(-20px) translateX(10px) rotate(120deg)',
-					},
-					'66%': { 
-						transform: 'translateY(-10px) translateX(-15px) rotate(240deg)',
-					}
 				}
 			},
 			animation: {
@@ -133,9 +111,7 @@ export default {
 				'gradient-shift': 'gradient-shift 8s ease infinite',
 				'fade-in': 'fade-in 0.8s ease-out forwards',
 				'slide-in': 'slide-in 0.5s ease-out forwards',
-				'scale-in': 'scale-in 0.5s ease-out forwards',
-				'hologram': 'hologram 4s ease-in-out infinite',
-				'particle-float': 'particle-float 12s ease-in-out infinite',
+				'scale-in': 'scale-in 0.5s ease-out forwards'
 			}
 		}
 	},
