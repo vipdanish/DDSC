@@ -11,7 +11,7 @@ const TeamSection = () => {
       name: "Syed Danish",
       role: "Community Leader",
       initials: "SD",
-      bio: "Leading the NextGen Developer Club community initiatives and growth.",
+      bio: "Leading the DCode Developers Club community initiatives and growth.",
       image: "/lovable-uploads/37e91a02-fe41-4401-801a-8bafaf180aca.png",
       portfolio: "https://okdanish.netlify.app/"
     },
@@ -59,7 +59,7 @@ const TeamSection = () => {
           <h2 className="heading-md mb-6">Our <span className="gradient-text">Core Team</span></h2>
           <div className="w-20 h-1 bg-gradient-to-r from-ndc-purple to-ndc-blue mx-auto mb-6"></div>
           <p className={`text-lg ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
-            Meet the passionate individuals who lead the NextGen Developer Club and work
+            Meet the passionate individuals who lead the DCode Developers Club and work
             tirelessly to create valuable experiences for our members.
           </p>
         </div>
@@ -151,19 +151,6 @@ const TeamSection = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Made by Danish section */}
-        <div className="mt-16 text-center">
-          <p className={`text-sm ${theme === 'light' ? 'text-gray-600' : 'text-gray-400'}`}>
-            Made with ❤️ by{' '}
-            <span 
-              className="font-medium text-ndc-purple hover:text-ndc-blue cursor-pointer transition-colors"
-              onClick={() => window.open('https://okdanish.netlify.app/', '_blank')}
-            >
-              Danish
-            </span>
-          </p>
         </div>
       </div>
     </section>

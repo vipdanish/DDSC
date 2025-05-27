@@ -40,8 +40,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center gap-3">
-            <img src="/lovable-uploads/1cf4c0d1-cdfb-4d0a-9466-63096565f5d4.png" alt="NDC Logo" className="h-10 w-auto animate-pulse-slow" />
-            <span className={`text-xl font-bold ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>NextGen Developer Club</span>
+            <img src="/lovable-uploads/1562081e-2603-4dd2-8c30-cc01d2781a8b.png" alt="DCode Logo" className="h-10 w-auto animate-pulse-slow" />
+            <span className={`text-xl font-bold ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>DCode Developers Club</span>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#about" className={`${theme === 'light' ? 'text-gray-700' : 'text-gray-300'} hover:${theme === 'light' ? 'text-gray-900' : 'text-white'} transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-ndc-purple after:transition-all after:duration-300`}>About</a>
