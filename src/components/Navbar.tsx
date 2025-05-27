@@ -1,6 +1,5 @@
 
 import { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button";
 import { ThemeToggle } from './ThemeToggle';
 import { useTheme } from '@/hooks/use-theme';
 
@@ -22,10 +21,6 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  const handleJoinClick = () => {
-    window.open("https://forms.gle/ke3hyQjEtDZWPkyL7", "_blank");
-  };
 
   return (
     <header 
@@ -53,10 +48,6 @@ const Navbar = () => {
           </nav>
           <div className="flex items-center gap-4">
             <ThemeToggle />
-            <Button className="btn-primary group" onClick={handleJoinClick}>
-              <span className="group-hover:mr-2 transition-all duration-300">Join Now</span>
-              <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">→</span>
-            </Button>
           </div>
         </div>
       </div>

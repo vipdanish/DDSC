@@ -16,11 +16,11 @@ const TeamSection = () => {
       portfolio: "https://okdanish.netlify.app/"
     },
     {
-      name: "Syed Rayyan",
+      name: "Shaikh Ab Raheman",
       role: "Co-Leader",
-      initials: "SR",
+      initials: "SAR",
       bio: "Supporting community leadership and helping drive club initiatives forward.",
-      image: "/lovable-uploads/31650158-cb9b-4eb6-8546-bfc58d52840d.png"
+      image: "/lovable-uploads/86cd7680-c4a5-4a27-a4e5-0e5dc28d6bde.png"
     },
     {
       name: "Shaikh Sohel",
@@ -37,9 +37,9 @@ const TeamSection = () => {
       image: "/lovable-uploads/d88d7695-baa3-48b3-9aa6-bddf1978be46.png"
     },
     {
-      name: "Mohammad Areeb",
+      name: "Syed Rayyan",
       role: "Graphic Designer",
-      initials: "MA",
+      initials: "SR",
       bio: "Creating visual identity and designs for the club's digital and print materials.",
       image: "/lovable-uploads/bf586626-327b-4309-a59b-36193c1649cd.png"
     },
