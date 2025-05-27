@@ -32,7 +32,7 @@ const WhyJoinSection = () => {
           <h2 className="heading-md mb-6 text-center">Why <span className="gradient-text">Join Us?</span></h2>
           <div className="w-20 h-1 bg-gradient-to-r from-ndc-purple to-ndc-blue mx-auto mb-6"></div>
           <p className="text-lg text-gray-300 mx-auto">
-            Being part of the NextGen Developer Club opens doors to valuable learning experiences, 
+            Being part of the DCode Developers Club opens doors to valuable learning experiences, 
             professional growth opportunities, and a supportive community of fellow tech enthusiasts.
           </p>
         </div>

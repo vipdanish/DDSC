@@ -32,7 +32,7 @@ const BenefitsSection = () => {
           <h2 className="heading-md mb-6">Exclusive <span className="gradient-text">Benefits</span></h2>
           <div className="w-20 h-1 bg-gradient-to-r from-ndc-purple to-ndc-blue mx-auto mb-6"></div>
           <p className="text-lg text-gray-300">
-            Being part of the NextGen Developer Club comes with amazing perks and opportunities
+            Being part of the DCode Developers Club comes with amazing perks and opportunities
             to enhance your learning journey and career prospects.
           </p>
         </div>

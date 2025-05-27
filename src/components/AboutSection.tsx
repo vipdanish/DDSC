@@ -4,10 +4,10 @@ const AboutSection = () => {
     <section id="about" className="py-20 bg-secondary/30">
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="heading-md mb-6">About <span className="gradient-text">NDC</span></h2>
+          <h2 className="heading-md mb-6">About <span className="gradient-text">DCode</span></h2>
           <div className="w-20 h-1 bg-gradient-to-r from-ndc-purple to-ndc-blue mx-auto mb-6"></div>
           <p className="text-lg text-gray-300">
-            The Nextgen Developer Club (NDC) is a student-driven community dedicated to empowering the next generation of 
+            The DCode Developers Club is a student-driven community dedicated to empowering the next generation of 
             technology leaders through hands-on learning, collaboration, and innovation.
           </p>
         </div>

@@ -34,8 +34,7 @@ const PartnersSection = () => {
     {
       name: "Women Techmakers Aurangabad (Chh. Sambhajinagar)",
       description: "Providing visibility, community, and resources for women in technology to drive innovation and participation.",
-      logo: "/lovable-uploads/4a60b97e-f6a6-4643-8871-18e17c8abd9d.png",
-      secondaryLogo: "/lovable-uploads/41ae9005-9437-499b-8302-f5546c3214e0.png",
+      logo: "/lovable-uploads/41ae9005-9437-499b-8302-f5546c3214e0.png",
       label: "Diversity & Inclusion Partner",
       labelColor: theme === 'light' ? "text-blue-700" : "text-ndc-blue",
       website: "https://www.womentechmakers.com/"
@@ -65,26 +64,11 @@ const PartnersSection = () => {
             >
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="flex justify-center animate-float">
-                  {partner.secondaryLogo ? (
-                    <div className="flex items-center gap-8">
-                      <img 
-                        src={partner.logo} 
-                        alt={`${partner.name} Logo`} 
-                        className="max-h-24 object-contain"
-                      />
-                      <img 
-                        src={partner.secondaryLogo} 
-                        alt={`${partner.name} Secondary Logo`} 
-                        className="max-h-24 object-contain"
-                      />
-                    </div>
-                  ) : (
-                    <img 
-                      src={partner.logo} 
-                      alt={`${partner.name} Logo`} 
-                      className="max-h-48 object-contain"
-                    />
-                  )}
+                  <img 
+                    src={partner.logo} 
+                    alt={`${partner.name} Logo`} 
+                    className="max-h-48 object-contain"
+                  />
                 </div>
                 <div className="animate-fade-in">
                   <h3 className={`heading-sm mb-4 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>

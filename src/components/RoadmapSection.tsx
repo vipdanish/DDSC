@@ -103,7 +103,7 @@ const RoadmapSection = () => {
             ✨ <em>Real skills. Real impact. Real projects.</em>
           </p>
           <p className={`text-lg ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
-            Join the NextGen Developer Club and let your journey begin.
+            Join the DCode Developers Club and let your journey begin.
           </p>
         </div>
       </div>

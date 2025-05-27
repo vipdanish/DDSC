@@ -141,10 +141,6 @@ const Footer = () => {
               <p className="text-gray-400 text-lg">
                 © {new Date().getFullYear()} DCode Developers Club. All rights reserved.
               </p>
-              <div className="hidden md:block w-px h-6 bg-white/20"></div>
-              <p className="text-gray-400 text-lg">
-                Building the future, one line of code at a time.
-              </p>
             </div>
             <div className="flex items-center gap-3 text-gray-400">
               <span className="text-lg">Made with</span>

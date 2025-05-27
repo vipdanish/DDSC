@@ -24,9 +24,9 @@ const JoinSection = () => {
         
         <div className="max-w-md mx-auto glass-card p-8 hover:shadow-lg hover:shadow-ndc-purple/10 transition-all duration-300 transform hover:-translate-y-1">
           <div className="text-center">
-            <img src="/lovable-uploads/1cf4c0d1-cdfb-4d0a-9466-63096565f5d4.png" alt="NDC Logo" className="h-16 w-auto mx-auto mb-6 animate-pulse-slow" />
+            <img src="/lovable-uploads/1cf4c0d1-cdfb-4d0a-9466-63096565f5d4.png" alt="DCode Logo" className="h-16 w-auto mx-auto mb-6 animate-pulse-slow" />
             <p className="text-gray-300 mb-6">
-              Click below to fill out our membership application form and join the NextGen Developer Club today!
+              Click below to fill out our membership application form and join the DCode Developers Club today!
             </p>
             <Button onClick={handleJoinClick} className="w-full btn-primary group transition-all duration-300">
               <span className="group-hover:mr-2 transition-all duration-300">Apply to Join</span>
