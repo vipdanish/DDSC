@@ -67,7 +67,7 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-ndc-purple via-ndc-blue to-ndc-green text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient-shift;
+    @apply bg-gradient-to-r from-ndc-purple via-ndc-blue to-ndc-green text-transparent bg-clip-text bg-[length:200%_auto];
   }
   
   .glass-card {
