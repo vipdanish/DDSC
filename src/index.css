@@ -71,7 +71,7 @@
   }
   
   .glass-card {
-    @apply bg-black/20 backdrop-blur-lg border border-white/10 rounded-xl;
+    @apply bg-black/20 dark:bg-black/20 bg-white/20 backdrop-blur-lg border border-white/10 dark:border-white/10 border-gray-200/20 rounded-xl;
   }
   
   .section-container {
