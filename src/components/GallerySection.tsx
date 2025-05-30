@@ -1,12 +1,13 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTheme } from "@/hooks/use-theme";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const GallerySection = () => {
   const { theme } = useTheme();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const [currentIndex, setCurrentIndex] = useState(1); // Start with second image as center
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const [isHovered, setIsHovered] = useState(false);
 
   const galleryItems = [
     {
@@ -34,6 +35,17 @@ const GallerySection = () => {
       description: "Core team members discussing strategic initiatives and planning the club's activities for skill development and community building."
     }
   ];
+
+  // Auto-slide functionality
+  useEffect(() => {
+    if (!isHovered) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % galleryItems.length);
+      }, 1000); // 1 second interval
+
+      return () => clearInterval(interval);
+    }
+  }, [isHovered, galleryItems.length]);
 
   const openModal = (index: number) => {
     setSelectedImage(index);
@@ -107,7 +119,11 @@ const GallerySection = () => {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative h-[500px] max-w-6xl mx-auto overflow-hidden">
+        <div 
+          className="relative h-[500px] max-w-6xl mx-auto overflow-hidden"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           {/* Navigation Buttons */}
           <button
             onClick={moveRight}
@@ -190,9 +206,9 @@ const GallerySection = () => {
           ))}
         </div>
 
-        {/* Enhanced Modal */}
+        {/* Enhanced Modal - No background effect */}
         {selectedImage !== null && (
-          <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 animate-fade-in">
+          <div className="fixed inset-0 bg-black z-50 flex items-center justify-center p-4 animate-fade-in">
             <div className="relative max-w-4xl w-full animate-scale-in">
               <button
                 onClick={closeModal}
