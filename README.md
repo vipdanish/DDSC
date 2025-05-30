@@ -9,7 +9,7 @@ This project reflects our shared journey in tech, learning by doing, and buildin
 
 ## 🌐 Project Info
 
-**Live URL**: _[Add your deployed site URL here]_
+**Live URL**: https://www.dcode.club
 
 Website crafted with care by **Syed Danish Ishaque**.
 
