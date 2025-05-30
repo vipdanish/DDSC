@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 const GallerySection = () => {
   const { theme } = useTheme();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(1); // Start with second image as center
 
   const galleryItems = [
     {
@@ -54,6 +55,38 @@ const GallerySection = () => {
     }
   };
 
+  const moveLeft = () => {
+    setCurrentIndex((prev) => (prev + 1) % galleryItems.length);
+  };
+
+  const moveRight = () => {
+    setCurrentIndex((prev) => (prev - 1 + galleryItems.length) % galleryItems.length);
+  };
+
+  const getImagePosition = (index: number) => {
+    const diff = (index - currentIndex + galleryItems.length) % galleryItems.length;
+    if (diff === 0) return 'center';
+    if (diff === 1 || diff === galleryItems.length - 1) return 'side';
+    return 'hidden';
+  };
+
+  const getImageStyles = (position: string, index: number) => {
+    const baseStyles = "absolute transition-all duration-700 ease-in-out cursor-pointer";
+    
+    switch (position) {
+      case 'center':
+        return `${baseStyles} left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-96 z-30 scale-100 opacity-100`;
+      case 'side':
+        const diff = (index - currentIndex + galleryItems.length) % galleryItems.length;
+        const isRight = diff === 1;
+        return `${baseStyles} ${
+          isRight ? 'left-[70%]' : 'left-[10%]'
+        } top-1/2 -translate-y-1/2 w-48 h-64 z-20 scale-90 opacity-75`;
+      default:
+        return `${baseStyles} opacity-0 scale-75 pointer-events-none`;
+    }
+  };
+
   return (
     <section id="gallery" className={`py-20 transition-all duration-1000 ease-in-out ${
       theme === 'light' ? 'bg-gradient-to-br from-gray-50 to-blue-50' : 'bg-gradient-to-br from-background to-secondary'
@@ -73,46 +106,87 @@ const GallerySection = () => {
           </p>
         </div>
 
-        {/* Masonry-style grid for portrait photos */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-          {galleryItems.map((item, index) => (
-            <div
-              key={item.id}
-              className={`group relative overflow-hidden rounded-2xl border cursor-pointer transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-ndc-purple/20 break-inside-avoid mb-6 animate-fade-in ${
-                theme === 'light' 
-                  ? 'bg-white border-gray-200 shadow-lg hover:shadow-2xl hover:border-ndc-purple/30' 
-                  : 'bg-black/20 border-white/10 hover:shadow-2xl hover:border-ndc-blue/30'
-              }`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-              onClick={() => openModal(index)}
-            >
-              <div className="relative overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-auto object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                <div className="absolute bottom-4 left-4 right-4 transform translate-y-8 group-hover:translate-y-0 transition-all duration-500 opacity-0 group-hover:opacity-100">
-                  <h3 className="text-white font-semibold text-lg mb-2 drop-shadow-lg">{item.title}</h3>
-                  <p className="text-white/90 text-sm line-clamp-3 drop-shadow-md">{item.description}</p>
+        {/* Carousel Container */}
+        <div className="relative h-[500px] max-w-6xl mx-auto overflow-hidden">
+          {/* Navigation Buttons */}
+          <button
+            onClick={moveRight}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-40 bg-black/60 hover:bg-black/80 text-white p-4 rounded-full transition-all duration-300 hover:scale-110 backdrop-blur-sm"
+          >
+            <ChevronLeft size={24} />
+          </button>
+          
+          <button
+            onClick={moveLeft}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-40 bg-black/60 hover:bg-black/80 text-white p-4 rounded-full transition-all duration-300 hover:scale-110 backdrop-blur-sm"
+          >
+            <ChevronRight size={24} />
+          </button>
+
+          {/* Images */}
+          {galleryItems.map((item, index) => {
+            const position = getImagePosition(index);
+            const isCenter = position === 'center';
+            
+            return (
+              <div
+                key={item.id}
+                className={getImageStyles(position, index)}
+                onClick={() => openModal(index)}
+              >
+                <div className={`group relative overflow-hidden rounded-2xl border h-full cursor-pointer transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-ndc-purple/20 ${
+                  theme === 'light' 
+                    ? 'bg-white border-gray-200 shadow-lg hover:shadow-2xl hover:border-ndc-purple/30' 
+                    : 'bg-black/20 border-white/10 hover:shadow-2xl hover:border-ndc-blue/30'
+                }`}>
+                  <div className="relative overflow-hidden h-full">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                    {isCenter && (
+                      <div className="absolute bottom-4 left-4 right-4 transform translate-y-8 group-hover:translate-y-0 transition-all duration-500 opacity-0 group-hover:opacity-100">
+                        <h3 className="text-white font-semibold text-lg mb-2 drop-shadow-lg">{item.title}</h3>
+                        <p className="text-white/90 text-sm line-clamp-3 drop-shadow-md">{item.description}</p>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
-              <div className={`p-6 transition-all duration-300 ${
-                theme === 'light' ? 'bg-white group-hover:bg-gray-50' : 'bg-black/20 group-hover:bg-black/30'
-              }`}>
-                <h3 className={`text-xl font-bold mb-3 transition-colors duration-300 ${
-                  theme === 'light' ? 'text-gray-900 group-hover:text-ndc-purple' : 'text-white group-hover:text-ndc-blue'
-                }`}>
-                  {item.title}
-                </h3>
-                <p className={`transition-colors duration-300 leading-relaxed ${
-                  theme === 'light' ? 'text-gray-700' : 'text-gray-300'
-                } group-hover:text-opacity-90`}>
-                  {item.description}
-                </p>
-              </div>
-            </div>
+            );
+          })}
+        </div>
+
+        {/* Center Image Info */}
+        <div className="text-center mt-8 animate-fade-in">
+          <h3 className={`text-2xl font-bold mb-3 transition-colors duration-300 ${
+            theme === 'light' ? 'text-gray-900' : 'text-white'
+          }`}>
+            {galleryItems[currentIndex].title}
+          </h3>
+          <p className={`max-w-2xl mx-auto leading-relaxed ${
+            theme === 'light' ? 'text-gray-700' : 'text-gray-300'
+          }`}>
+            {galleryItems[currentIndex].description}
+          </p>
+        </div>
+
+        {/* Dots Indicator */}
+        <div className="flex justify-center mt-8 space-x-3">
+          {galleryItems.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentIndex
+                  ? 'bg-gradient-to-r from-ndc-purple to-ndc-blue scale-125'
+                  : theme === 'light' 
+                    ? 'bg-gray-300 hover:bg-gray-400' 
+                    : 'bg-gray-600 hover:bg-gray-500'
+              }`}
+            />
           ))}
         </div>
 
