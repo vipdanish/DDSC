@@ -36,12 +36,12 @@ const GallerySection = () => {
     }
   ];
 
-  // Auto-slide functionality
+  // Auto-slide functionality with 2.5 second interval
   useEffect(() => {
     if (!isHovered) {
       const interval = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % galleryItems.length);
-      }, 1000); // 1 second interval
+      }, 2500); // 2.5 second interval
 
       return () => clearInterval(interval);
     }
@@ -150,7 +150,7 @@ const GallerySection = () => {
                 className={getImageStyles(position, index)}
                 onClick={() => openModal(index)}
               >
-                <div className={`group relative overflow-hidden rounded-2xl border h-full cursor-pointer transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-ndc-purple/20 ${
+                <div className={`group relative overflow-hidden rounded-2xl border h-full cursor-pointer transition-all duration-500 hover:shadow-2xl hover:shadow-ndc-purple/20 ${
                   theme === 'light' 
                     ? 'bg-white border-gray-200 shadow-lg hover:shadow-2xl hover:border-ndc-purple/30' 
                     : 'bg-black/20 border-white/10 hover:shadow-2xl hover:border-ndc-blue/30'
@@ -159,7 +159,7 @@ const GallerySection = () => {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                      className="w-full h-full object-cover transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                     {isCenter && (
