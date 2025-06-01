@@ -9,12 +9,15 @@ const TeamSection = () => {
   
   // President (Featured Profile)
   const president = {
-    name: "Syed Danish",
-    role: "President – DDSC",
-    initials: "SD",
-    bio: "Leads the strategic direction, community initiatives, and overall vision of DDSC.",
+    name: "Syed Danish Ishaque",
+    role: "Founder & President – DDSC",
+    initials: "SDI",
+    bio: "Danish built DDSC from the ground up—not just as a club, but as a launchpad for Tech makers, dreamers, and doers. He leads with the belief that learning happens best when you create, collaborate, and challenge yourself every day.",
+    tagline: "From ideas to impact — together.",
     image: "/lovable-uploads/37e91a02-fe41-4401-801a-8bafaf180aca.png",
-    portfolio: "https://okdanish.netlify.app/"
+    linkedin: "https://www.linkedin.com/in/techdanish/",
+    github: "https://github.com/vipdanish",
+    email: "techdanish001@gmail.com"
   };
 
   // Core Team (Standard Profile Cards)
@@ -147,21 +150,9 @@ const TeamSection = () => {
                   
                   {/* President Info */}
                   <div className="flex-1 text-center lg:text-left">
-                    {president.portfolio ? (
-                      <h3 
-                        className={`text-3xl font-bold mb-2 cursor-pointer transition-colors hover:text-ndc-purple ${
-                          theme === 'light' ? 'text-gray-900' : 'text-white'
-                        }`}
-                        onClick={() => window.open(president.portfolio, '_blank')}
-                      >
-                        {president.name}
-                        <ExternalLink className="inline ml-2 h-5 w-5" />
-                      </h3>
-                    ) : (
-                      <h3 className={`text-3xl font-bold mb-2 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
-                        {president.name}
-                      </h3>
-                    )}
+                    <h3 className={`text-3xl font-bold mb-2 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
+                      {president.name}
+                    </h3>
                     
                     <div className="mb-4">
                       <span className={`inline-block px-4 py-2 rounded-full text-lg font-semibold ${
@@ -173,33 +164,50 @@ const TeamSection = () => {
                       </span>
                     </div>
                     
-                    <p className={`text-lg leading-relaxed mb-6 ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
+                    <p className={`text-lg leading-relaxed mb-4 ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
                       {president.bio}
+                    </p>
+                    
+                    <p className={`text-xl font-semibold mb-6 italic ${theme === 'light' ? 'text-blue-600' : 'text-ndc-blue'}`}>
+                      "{president.tagline}"
                     </p>
                     
                     {/* Social links */}
                     <div className="flex justify-center lg:justify-start space-x-4">
-                      <div className={`p-3 rounded-full ${
-                        theme === 'light' 
-                          ? 'bg-blue-100 hover:bg-blue-200' 
-                          : 'bg-white/10 hover:bg-white/20'
-                      } transition-colors cursor-pointer hover:scale-110 transition-transform`}>
+                      <a 
+                        href={president.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`p-3 rounded-full ${
+                          theme === 'light' 
+                            ? 'bg-blue-100 hover:bg-blue-200' 
+                            : 'bg-white/10 hover:bg-white/20'
+                        } transition-colors cursor-pointer hover:scale-110 transition-transform`}
+                      >
                         <Linkedin className="h-5 w-5 text-ndc-blue" />
-                      </div>
-                      <div className={`p-3 rounded-full ${
-                        theme === 'light' 
-                          ? 'bg-purple-100 hover:bg-purple-200' 
-                          : 'bg-white/10 hover:bg-white/20'
-                      } transition-colors cursor-pointer hover:scale-110 transition-transform`}>
+                      </a>
+                      <a 
+                        href={president.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`p-3 rounded-full ${
+                          theme === 'light' 
+                            ? 'bg-purple-100 hover:bg-purple-200' 
+                            : 'bg-white/10 hover:bg-white/20'
+                        } transition-colors cursor-pointer hover:scale-110 transition-transform`}
+                      >
                         <Github className="h-5 w-5 text-ndc-purple" />
-                      </div>
-                      <div className={`p-3 rounded-full ${
-                        theme === 'light' 
-                          ? 'bg-green-100 hover:bg-green-200' 
-                          : 'bg-white/10 hover:bg-white/20'
-                      } transition-colors cursor-pointer hover:scale-110 transition-transform`}>
+                      </a>
+                      <a 
+                        href={`mailto:${president.email}`}
+                        className={`p-3 rounded-full ${
+                          theme === 'light' 
+                            ? 'bg-green-100 hover:bg-green-200' 
+                            : 'bg-white/10 hover:bg-white/20'
+                        } transition-colors cursor-pointer hover:scale-110 transition-transform`}
+                      >
                         <Mail className="h-5 w-5 text-ndc-green" />
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
