@@ -8,6 +8,7 @@ import TeamSection from '@/components/TeamSection';
 import JoinSection from '@/components/JoinSection';
 import PartnersSection from '@/components/PartnersSection';
 import RoadmapSection from '@/components/RoadmapSection';
+import GallerySection from '@/components/GallerySection';
 import Footer from '@/components/Footer';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 
@@ -20,6 +21,7 @@ const Index = () => {
       <WhyJoinSection />
       <BenefitsSection />
       <RoadmapSection />
+      <GallerySection />
       <TeamSection />
       <PartnersSection />
       <JoinSection />

@@ -6,31 +6,31 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 const GallerySection = () => {
   const { theme } = useTheme();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
   const galleryItems = [
     {
       id: 1,
-      image: "/lovable-uploads/f8d148d8-8a75-494c-8aeb-ee1d320435e5.png",
+      image: "/lovable-uploads/5e6f6f4e-3e10-4db7-8c58-1abdecf9cb21.png",
       title: "First Meeting of DDSC",
       description: "The inaugural meeting of DCode Developers Student Club where passionate students gathered to discuss the club's vision and roadmap for the future."
     },
     {
       id: 2,
-      image: "/lovable-uploads/42e7bbe7-c7ee-40ce-afc1-ed364cc71526.png",
+      image: "/lovable-uploads/130d269a-ee09-4f08-8093-b1878b1e7da3.png",
       title: "Team Collaboration Session",
       description: "Club members engaged in collaborative discussions, sharing ideas and planning upcoming projects and events."
     },
     {
       id: 3,
-      image: "/lovable-uploads/40b4b5a2-07f2-428b-9e77-88f7586e1098.png",
+      image: "/lovable-uploads/8b55aaf1-820b-4689-838d-0cb2feb287e1.png",
       title: "Knowledge Sharing Workshop",
       description: "Interactive workshop session where experienced members shared technical knowledge with newcomers, fostering a culture of learning and growth."
     },
     {
       id: 4,
-      image: "/lovable-uploads/371c7355-893e-47ba-aee5-6b71e894e9ac.png",
+      image: "/lovable-uploads/baaa08b7-8065-478d-99ea-22141841a997.png",
       title: "Strategic Planning Meeting",
       description: "Core team members discussing strategic initiatives and planning the club's activities for skill development and community building."
     }
@@ -41,7 +41,7 @@ const GallerySection = () => {
     if (!isHovered) {
       const interval = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % galleryItems.length);
-      }, 2500); // 2.5 second interval
+      }, 2500);
 
       return () => clearInterval(interval);
     }
@@ -206,7 +206,7 @@ const GallerySection = () => {
           ))}
         </div>
 
-        {/* Enhanced Modal - No background effect */}
+        {/* Modal */}
         {selectedImage !== null && (
           <div className="fixed inset-0 bg-black z-50 flex items-center justify-center p-4 animate-fade-in">
             <div className="relative max-w-4xl w-full animate-scale-in">

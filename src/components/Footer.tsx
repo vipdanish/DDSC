@@ -1,4 +1,3 @@
-
 import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, ExternalLink, Heart, Github } from "lucide-react";
 import { useTheme } from "@/hooks/use-theme";
 import { useState } from "react";
@@ -177,7 +176,7 @@ const Footer = () => {
               <span className="text-xl transition-all duration-300 group-hover:text-white">by</span>
               <div className="relative">
                 <a 
-                  href="https://www.linkedin.com/in/techdanish"
+                  href="https://www.linkedin.com/in/techdanish/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-bold text-2xl bg-gradient-to-r from-ndc-purple via-ndc-blue to-ndc-green text-transparent bg-clip-text hover:scale-110 cursor-pointer transition-all duration-500 relative inline-block group-hover:animate-pulse"
