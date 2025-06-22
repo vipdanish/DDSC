@@ -7,13 +7,14 @@ const RoadmapSection = () => {
   const { theme } = useTheme();
   
   const roadmapEvents = [
-    {
-      title: "Launch Meetup – Code the Future",
-      location: "APJ Abdul Kalam Auditorium Hall",
-      description: "Club introduction + lightning tech talks by mentors and industry guests",
-      timing: "Coming Soon",
-      icon: "🔸"
-    },
+   {
+  title: "Launch Meetup – Code the Future",
+  location: "APJ Abdul Kalam Auditorium Hall",
+  description: "Club introduction + lightning tech talks by mentors and industry guests",
+  timing: "Completed on 20/06/2025",
+  icon: "✅"
+},
+
     {
       title: "Git Started",
       location: "Virtual",

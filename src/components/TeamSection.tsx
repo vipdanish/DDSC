@@ -72,7 +72,7 @@ const TeamSection = () => {
       role: "Event Management Team Leader",
       initials: "GJ",
       bio: "Plans and coordinates all club events and workshops.",
-      // image: "/lovable-uploads/86cd7680-c4a5-4a27-a4e5-0e5dc28d6bde.png"
+      image: "/lovable-uploads/WhatsApp Image 2025-06-19 at 23.07.58_e9242bf2.jpg"
     }
   ];
 
