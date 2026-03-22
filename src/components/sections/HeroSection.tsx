@@ -62,11 +62,11 @@ const HeroSection = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-ndc-purple/10 blur-[120px] animate-pulse delay-700"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-8 sm:pb-12 relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 pt-4 sm:pt-6 pb-8 sm:pb-12 relative z-10 w-full">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {slides.map((slide, index) => (
-              <div key={index} className="flex-[0_0_100%] min-w-0 grid lg:grid-cols-2 gap-12 items-center">
+              <div key={index} className="flex-[0_0_100%] min-w-0 grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
                 {/* Left Column - Content */}
                 <div className="text-center lg:text-left lg:col-span-1 animate-fade-in">
                   {/* Tagline */}
