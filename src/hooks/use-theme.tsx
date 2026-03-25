@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState } from 'react';
+=======
+import React, { createContext, useContext, useEffect } from 'react';
+>>>>>>> asif-update
 
 type Theme = 'dark' | 'light';
 
@@ -12,6 +16,7 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
+<<<<<<< HEAD
   const [theme, setTheme] = useState<Theme>('dark');
 
   useEffect(() => {
@@ -32,6 +37,19 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const toggleTheme = () => {
     setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark');
   };
+=======
+  // Permanently set theme to 'dark'
+  const theme: Theme = 'dark';
+
+  useEffect(() => {
+    // Always apply dark theme to the document
+    document.documentElement.classList.remove('light');
+    document.documentElement.classList.add('dark');
+  }, []);
+
+  const setTheme = () => {};
+  const toggleTheme = () => {};
+>>>>>>> asif-update
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>

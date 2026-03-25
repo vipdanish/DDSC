@@ -20,8 +20,14 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+<<<<<<< HEAD
 				sans: ['Inter', 'system-ui', 'sans-serif'],
 				display: ['Poppins', 'Inter', 'sans-serif'],
+=======
+				primary: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+				heading: ['Poppins', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+				mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+>>>>>>> asif-update
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -57,10 +63,29 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+<<<<<<< HEAD
 				ndc: {
 					purple: '#8B5CF6',
 					blue: '#0EA5E9',
 					green: '#10B981',
+=======
+				code: {
+					// Professional coding club colors
+					indigo: '#6366f1',      // Primary indigo
+					purple: '#8b5cf6',      // Purple accent
+					pink: '#ec4899',        // Pink highlights
+					cyan: '#06b6d4',        // Cyan accents
+					green: '#10b981',       // Success green
+					blue: '#3b82f6',        // Tech blue
+					dark: '#0f172a',        // Dark background
+					darker: '#020617',      // Darker bg
+					light: '#f8fafc',       // Light text
+				},
+				ndc: {
+					purple: '#8b5cf6',
+					blue: '#3b82f6',
+					green: '#10b981',
+>>>>>>> asif-update
 				}
 			},
 			borderRadius: {
@@ -96,6 +121,13 @@ export default {
 				'fade-in': 'fade-in 0.8s ease-out forwards',
 				'slide-in': 'slide-in 0.5s ease-out forwards',
 				'scale-in': 'scale-in 0.5s ease-out forwards'
+<<<<<<< HEAD
+=======
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'dot-pattern': `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%238B5CF6' fill-opacity='0.08' fill-rule='evenodd'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/g%3E%3C/svg%3E")`,
+>>>>>>> asif-update
 			}
 		}
 	},
