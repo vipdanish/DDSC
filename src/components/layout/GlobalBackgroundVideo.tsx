@@ -1,8 +1,8 @@
 const GlobalBackgroundVideo = () => {
   return (
-    <div className="bg-video-wrap" aria-hidden="true">
+    <div className="video-bg-container" aria-hidden="true">
       <video 
-        className="bg-video" 
+        className="video-bg-content" 
         autoPlay 
         muted 
         loop 
@@ -12,7 +12,7 @@ const GlobalBackgroundVideo = () => {
         <source src="/images/background_video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="bg-video-overlay"></div>
+      <div className="video-overlay"></div>
     </div>
   );
 };

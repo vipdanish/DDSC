@@ -1,33 +1,4 @@
-<<<<<<< HEAD
 
-import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/HeroSection';
-import AboutSection from '@/components/AboutSection';
-import WhyJoinSection from '@/components/WhyJoinSection';
-import BenefitsSection from '@/components/BenefitsSection';
-import TeamSection from '@/components/TeamSection';
-import JoinSection from '@/components/JoinSection';
-import PartnersSection from '@/components/PartnersSection';
-import RoadmapSection from '@/components/RoadmapSection';
-import GallerySection from '@/components/GallerySection';
-import Footer from '@/components/Footer';
-import ScrollToTopButton from '@/components/ScrollToTopButton';
-
-const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <WhyJoinSection />
-      <BenefitsSection />
-      <RoadmapSection />
-      <GallerySection />
-      <TeamSection />
-      <PartnersSection />
-      <JoinSection />
-      <Footer />
-=======
 /**
  * Index (Homepage)
  * Composes all major sections in the recommended order with sticky navbar alignment.
@@ -80,7 +51,6 @@ const Index = () => {
       {/* Contact */}
       <Footer />
       
->>>>>>> asif-update
       <ScrollToTopButton />
     </div>
   );
