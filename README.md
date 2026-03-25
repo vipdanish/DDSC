@@ -1,4 +1,42 @@
+<<<<<<< HEAD
+# 🎓 Dcode Student Developer Club
 
+Hey there!  
+Welcome to the official repository for the **Dcode Student Developer Club** — a place where student developers collaborate, experiment, and grow together.
+
+This project reflects our shared journey in tech, learning by doing, and building meaningful experiences.
+
+---
+
+## 🌐 Project Info
+
+**Live URL**: https://www.dcode.club
+
+Website crafted with care by **Syed Danish Ishaque**.
+
+---
+
+## 🛠️ Local Development Guide
+
+If you're more comfortable using your own development environment, you're absolutely welcome to do that. Just make sure Node.js and npm are set up on your machine.
+
+> 💡 I personally recommend using [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) — it makes managing Node versions super easy.
+
+### Steps to Get Started
+
+```bash
+# 1. Clone the repository using Git.
+git clone <YOUR_GIT_URL>
+
+# 2. Navigate into the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# 3. Install all the project dependencies.
+npm install
+
+# 4. Start the development server with hot reloading.
+npm run dev
+=======
 # 🎓 DCode Student Developer Club
 
 <div align="center">
@@ -74,39 +112,60 @@ npm run build
 ## 📁 Project Structure
 
 ```
-src/
-├── components/      # Reusable UI components
-│   ├── layout/      # Layout components (Header, Footer, Navbar)
-│   ├── sections/    # Homepage sections
-│   └── ui/          # Base UI components (shadcn)
-├── data/            # Static data (achievements, team, etc.)
-├── hooks/           # Custom React hooks
-├── pages/           # Page components
-└── lib/             # Utility functions
+DDSC-main/
+├── public/              # Static assets
+├── src/
+│   ├── components/      # React components
+│   ├── pages/           # Page components
+│   ├── hooks/           # Custom hooks
+│   └── data/            # Static data
+├── dist/                # Production build
+└── package.json         # Dependencies
 ```
 
 ---
 
-## 🤝 Contributing
+## 🚀 Deployment
 
-We welcome contributions from the community! Whether it's fixing bugs, adding new features, or improving documentation.
+### Quick Deploy
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+**Vercel:**
+```bash
+vercel deploy --prod
+```
+
+**Netlify:**
+```bash
+netlify deploy --prod --dir=dist
+```
+
+Or upload the `dist/` folder to any static hosting.
+
+---
+
+## 👨‍💻 Developer
+
+<div align="center">
+
+**Syed Asif**  
+*Full Stack Developer & Code Enthusiast*
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/the-syed-asif)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)](https://github.com/SyedAsif7)
+
+</div>
 
 ---
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+MIT License © 2026 Syed Asif
 
 ---
 
-## 📞 Contact
+<div align="center">
 
-DCode Developers Club - [@ndc_tech](https://twitter.com/ndc_tech)
+Made by Syed Asif
 
-Project Link: [https://github.com/SyedAsif7/DDSC-main](https://github.com/SyedAsif7/DDSC-main)
+</div>
+>>>>>>> asif-update

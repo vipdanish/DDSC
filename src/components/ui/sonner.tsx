@@ -1,12 +1,23 @@
-
+<<<<<<< HEAD
+import { useTheme } from "next-themes"
+=======
+>>>>>>> asif-update
 import { Toaster as Sonner, toast } from "sonner"
 
 type ToasterProps = React.ComponentProps<typeof Sonner>
 
 const Toaster = ({ ...props }: ToasterProps) => {
+<<<<<<< HEAD
+  const { theme = "system" } = useTheme()
+
+  return (
+    <Sonner
+      theme={theme as ToasterProps["theme"]}
+=======
   return (
     <Sonner
       theme="dark"
+>>>>>>> asif-update
       className="toaster group"
       toastOptions={{
         classNames: {
