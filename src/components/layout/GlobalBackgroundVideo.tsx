@@ -1,18 +1,29 @@
+import { useEffect, useRef } from 'react';
+
 const GlobalBackgroundVideo = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.log("Autoplay was prevented:", error);
+      });
+    }
+  }, []);
+
   return (
-    <div className="bg-video-wrap" aria-hidden="true">
+    <div className="video-bg-container" aria-hidden="true">
       <video 
-        className="bg-video" 
-        autoPlay 
+        ref={videoRef}
+        className="video-bg-content" 
         muted 
         loop 
-        playsInline 
-        preload="metadata"
+        playsInline
+        poster="/images/ssiems-campus.webp"
       >
         <source src="/images/background_video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
       </video>
-      <div className="bg-video-overlay"></div>
+      <div className="video-overlay"></div>
     </div>
   );
 };
