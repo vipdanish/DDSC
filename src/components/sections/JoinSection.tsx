@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { getAssetPath } from "@/lib/utils";
 
 const JoinSection = () => {
   const handleJoinClick = () => {
@@ -23,7 +24,7 @@ const JoinSection = () => {
         
         <div className="max-w-md mx-auto p-8 backdrop-blur-xl rounded-3xl border transition-all duration-300 transform hover:-translate-y-1 bg-black/30 border-white/10 shadow-2xl hover:shadow-ndc-purple/20">
           <div className="text-center">
-            <img src="/images/Dcode-Logo.png" alt="DCode Logo" className="h-16 w-auto mx-auto mb-6 animate-pulse-slow" />
+            <img src={getAssetPath("images/Dcode-Logo.png")} alt="DCode Logo" className="h-16 w-auto mx-auto mb-6 animate-pulse-slow" />
             <p className="text-gray-300 mb-6">
               Click below to fill out our membership application form and join the DCode Developers Club today!
             </p>

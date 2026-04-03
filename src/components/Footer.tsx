@@ -32,7 +32,7 @@ const Footer = () => {
             <div className="flex items-center mb-8 group">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/1562081e-2603-4dd2-8c30-cc01d2781a8b.png" 
+                  src="lovable-uploads/1562081e-2603-4dd2-8c30-cc01d2781a8b.png" 
                   alt="DCode Logo" 
                   className="h-20 w-auto mr-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6" 
                 />

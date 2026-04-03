@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { getAssetPath } from "@/lib/utils";
 
 const GlobalBackgroundVideo = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -19,9 +20,9 @@ const GlobalBackgroundVideo = () => {
         muted 
         loop 
         playsInline
-        poster="/images/ssiems-campus.webp"
+        poster={getAssetPath("images/ssiems-campus.webp")}
       >
-        <source src="/images/background_video.mp4" type="video/mp4" />
+        <source src={getAssetPath("images/background_video.mp4")} type="video/mp4" />
       </video>
       <div className="video-overlay"></div>
     </div>

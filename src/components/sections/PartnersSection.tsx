@@ -1,12 +1,13 @@
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getAssetPath } from "@/lib/utils";
 
 const PartnersSection = () => {
   const partners = [
     {
       name: "Shri Shivaji Institute of Engineering and Management Studies",
       description: "Our official academic partner providing resources, spaces, and academic support for the club's activities and growth.",
-      logo: "/images/ssiems-logo.png",
+      logo: "images/ssiems-logo.png",
       label: "Official Academic Partner",
       labelColor: "text-ndc-blue",
       website: "https://ssiems.org.in/"
@@ -14,7 +15,7 @@ const PartnersSection = () => {
     {
       name: "GDG on Campus PES College of Engineering - Aurangabad, India",
       description: "Supporting our technical events and providing access to Google technologies and resources for our student community.",
-      logo: "/images/a962026c-ed9f-4509-9ff7-86ec7bad35d9.png",
+      logo: "images/a962026c-ed9f-4509-9ff7-86ec7bad35d9.png",
       label: "Technical Community Partner",
       labelColor: "text-ndc-green",
       website: "https://gdsc.community.dev/"
@@ -22,7 +23,7 @@ const PartnersSection = () => {
     {
       name: "Kotlin User Group - Sambhajinagar (Aurangabad)",
       description: "A vibrant community of developers and enthusiasts passionate about Kotlin and its ecosystem.",
-      logo: "/images/41ae9005-9437-499b-8302-f5546c3214e0.png",
+      logo: "images/41ae9005-9437-499b-8302-f5546c3214e0.png",
       label: "Technical Community Partner",
       labelColor: "text-ndc-purple",
       website: "https://kotlinlang.org/community/"
@@ -30,7 +31,7 @@ const PartnersSection = () => {
     {
       name: "Women Techmakers Aurangabad (Chh. Sambhajinagar)",
       description: "Providing visibility, community, and resources for women in technology to drive innovation and participation.",
-      logo: "/images/41ae9005-9437-499b-8302-f5546c3214e0.png",
+      logo: "images/41ae9005-9437-499b-8302-f5546c3214e0.png",
       label: "Diversity & Inclusion Partner",
       labelColor: "text-ndc-blue",
       website: "https://www.womentechmakers.com/"
@@ -60,7 +61,7 @@ const PartnersSection = () => {
                 {/* Logo */}
                 <div className="flex-shrink-0 w-full sm:w-32 flex justify-center">
                   <img 
-                    src={partner.logo} 
+                    src={getAssetPath(partner.logo)} 
                     alt={`${partner.name} Logo`} 
                     className="h-24 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
                   />

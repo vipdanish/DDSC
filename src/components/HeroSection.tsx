@@ -62,7 +62,7 @@ const HeroSection = () => {
           <div className="hidden lg:flex justify-center items-center">
             <div className="relative">
               <img 
-                src="/lovable-uploads/0b4581fd-f89d-4ef3-877e-e95fcb8be971.png" 
+                src="lovable-uploads/0b4581fd-f89d-4ef3-877e-e95fcb8be971.png" 
                 alt="DCode Developers Club Logo" 
                 className="w-96 h-auto opacity-90 hover:opacity-100 transition-opacity duration-300" 
               />

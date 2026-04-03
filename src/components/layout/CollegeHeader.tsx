@@ -1,4 +1,5 @@
 import { CheckCircle2, Award, ShieldCheck, University } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 
 const CollegeHeader = () => {
   const infoItems = [
@@ -31,7 +32,7 @@ const CollegeHeader = () => {
               <div className="relative flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-50 group-hover:opacity-75"></div>
                 <img
-                  src="/images/ssiems-logo.png"
+                  src={getAssetPath("images/ssiems-logo.png")}
                   alt="Shri Shivaji Institute of Engineering and Management Studies Logo"
                   className="relative h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
                 />
@@ -59,7 +60,7 @@ const CollegeHeader = () => {
               <div className="group relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-500 opacity-0 group-hover:opacity-75"></div>
                 <img
-                  src="/images/ssiems-ganesh.webp"
+                  src={getAssetPath("images/ssiems-ganesh.webp")}
                   alt="Traditional Ganesh statue"
                   className="relative h-7 sm:h-8 md:h-10 w-auto object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-110"
                 />
@@ -67,7 +68,7 @@ const CollegeHeader = () => {
               <div className="group relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-500 opacity-0 group-hover:opacity-75"></div>
                 <img
-                  src="/images/ssiems-naac.webp"
+                  src={getAssetPath("images/ssiems-naac.webp")}
                   alt="NAAC B Grade Accreditation"
                   className="relative h-7 sm:h-8 md:h-10 w-auto object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-110"
                 />

@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center gap-3">
-            <img src="/lovable-uploads/1562081e-2603-4dd2-8c30-cc01d2781a8b.png" alt="DCode Logo" className="h-10 w-auto animate-pulse-slow" />
+            <img src="lovable-uploads/1562081e-2603-4dd2-8c30-cc01d2781a8b.png" alt="DCode Logo" className="h-10 w-auto animate-pulse-slow" />
             <span className={`text-xl font-bold ${
               theme === 'light' ? 'text-gray-900' : 'text-white'
             }`}>DCode Developers Club</span>

@@ -12,6 +12,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ScrollToTopButton from "@/components/layout/ScrollToTopButton";
 import { toast } from "sonner";
+import { getAssetPath } from "@/lib/utils";
 
 const AchievementDetail = () => {
   const { id } = useParams();
@@ -159,7 +160,7 @@ const AchievementDetail = () => {
               {/* Simplified Gallery */}
               <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/5 bg-white/[0.02] group animate-fade-in" style={{ animationDelay: '200ms' }}>
                 <img 
-                  src={achievement.images[currentImageIndex]} 
+                  src={getAssetPath(achievement.images[currentImageIndex])} 
                   alt={achievement.title}
                   loading="lazy"
                   className="w-full h-full object-cover transition-opacity duration-500"
@@ -498,7 +499,7 @@ const AchievementDetail = () => {
                 >
                   <div className="aspect-[16/10] overflow-hidden relative">
                     <img 
-                      src={rel.images[0]} 
+                      src={getAssetPath(rel.images[0])} 
                       alt={`${rel.title} preview`} 
                       loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100" 
@@ -531,7 +532,7 @@ const AchievementDetail = () => {
           <button onClick={() => setIsLightboxOpen(false)} className="absolute top-8 right-8 text-white/40 hover:text-white transition-all"><X size={32} /></button>
           <button onClick={prevImage} className="absolute left-8 top-1/2 -translate-y-1/2 text-white/40 hover:text-white transition-all"><ChevronLeft size={48} /></button>
           <button onClick={nextImage} className="absolute right-8 top-1/2 -translate-y-1/2 text-white/40 hover:text-white transition-all"><ChevronRight size={48} /></button>
-          <img src={achievement.images[currentImageIndex]} alt="" className="max-w-full max-h-full object-contain rounded-2xl" />
+          <img src={getAssetPath(achievement.images[currentImageIndex])} alt="" className="max-w-full max-h-full object-contain rounded-2xl" />
         </div>
       )}
 

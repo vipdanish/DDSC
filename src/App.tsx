@@ -20,7 +20,7 @@ const App = () => (
         <GlobalBackgroundVideo />
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename="/DDSC_SSIEMS">
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />

@@ -1,14 +1,7 @@
-import { Instagram, Linkedin, Mail, MapPin, ExternalLink, Heart } from "lucide-react";
-import { useState } from "react";
+import { Instagram, Linkedin, Mail, MapPin, ExternalLink } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 
 const Footer = () => {
-  const [heartClicked, setHeartClicked] = useState(false);
-  
-  const handleHeartClick = () => {
-    setHeartClicked(true);
-    setTimeout(() => setHeartClicked(false), 1000);
-  };
-  
   return (
     <footer id="contact" className={`relative pt-10 pb-6 overflow-hidden transition-all duration-1000 bg-transparent backdrop-blur-xl border-t border-white/10`}>
       {/* Enhanced animated background elements */}
@@ -26,7 +19,7 @@ const Footer = () => {
             <div className="flex items-center mb-6 group">
               <div className="relative">
                 <img 
-                  src="/images/Dcode-Logo.png" 
+                  src={getAssetPath("images/Dcode-Logo.png")} 
                   alt="DCode Logo" 
                   className="h-16 w-auto mr-4 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6" 
                 />
@@ -150,15 +143,23 @@ const Footer = () => {
             <p className="text-gray-400 text-xl transition-all duration-300 hover:text-white">
               © {new Date().getFullYear()} DCode Developers Club. All rights reserved.
             </p>
-            <div className="flex items-center gap-2 text-sm text-gray-500">
-              <span>Made by</span>
+            <div className="flex flex-col sm:flex-row items-center gap-3 text-xl md:text-2xl text-gray-400 group/dev pt-4">
+              <span className="font-medium flex items-center gap-2">
+                Made by
+              </span>
               <a 
                 href="https://www.linkedin.com/in/the-syed-asif" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-gradient-to-r from-ndc-purple via-ndc-blue to-ndc-purple bg-clip-text text-transparent font-semibold hover:scale-105 transition-all duration-300"
+                className="relative group/name"
               >
-                Syed Asif
+                <span className="bg-gradient-to-r from-ndc-purple via-ndc-blue to-ndc-purple bg-clip-text text-transparent font-black tracking-tighter hover:scale-110 transition-all duration-500 block px-2">
+                  Syed Asif
+                </span>
+                <div className="absolute -bottom-1 left-0 w-0 h-1 bg-gradient-to-r from-ndc-purple to-ndc-blue rounded-full transition-all duration-700 group-hover/name:w-full"></div>
+                
+                {/* Developer Badge Glow */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-ndc-purple/20 to-ndc-blue/20 blur-xl rounded-full opacity-0 group-hover/name:opacity-100 transition-opacity duration-700 -z-10"></div>
               </a>
             </div>
           </div>

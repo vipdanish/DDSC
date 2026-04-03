@@ -7,6 +7,7 @@ import { useState, useMemo } from "react";
 import { Code, Terminal, Cpu, Zap, Trophy, Award, ExternalLink, Sparkles, Calendar, MapPin, ChevronRight, LayoutGrid } from "lucide-react";
 import { Link } from "react-router-dom";
 import { achievements } from "@/data/achievements";
+import { getAssetPath } from "@/lib/utils";
 
 const AchievementsSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -100,7 +101,7 @@ const AchievementsSection = () => {
               {/* Image Container - Premium Interaction */}
               <div className="relative h-48 overflow-hidden">
                 <img 
-                  src={achievement.images[0]} 
+                  src={getAssetPath(achievement.images[0])} 
                   alt={achievement.title} 
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"

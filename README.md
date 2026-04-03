@@ -1,112 +1,117 @@
-
-# 🎓 DCode Student Developer Club
+# 🎓 DCode Student Developer Club (DDSC)
 
 <div align="center">
 
-**The official website of DCode Student Developer Club at SSIEMS, Parbhani**
+**The official technology hub of Shri Shivaji Institute of Engineering and Management Studies (SSIEMS), Parbhani.**
 
-[🌐 Live Site](https://www.dcode.club)
-
-![Status](https://img.shields.io/badge/status-production%20ready-success)
-![Version](https://img.shields.io/badge/version-2.0-blue)
+[![Website](https://img.shields.io/badge/Website-dcode.club-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.dcode.club)
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![Tailwind](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 
 </div>
 
 ---
 
-## 🚀 About
+## 🚀 Project Overview
 
-Official website for the DCode Student Developer Club at Shri Shivaji Institute of Engineering and Management Studies (SSIEMS), Parbhani. A platform showcasing club activities, achievements, events, and opportunities for student developers.
+The **DCode Student Developer Club (DDSC)** official website is a high-end, cinematic platform designed to showcase our community's journey, achievements, and technical innovation. It serves as a central gateway for students to engage with cutting-edge technologies, participate in workshops, and build real-world projects.
 
----
-
-## ✨ Features
-
-- Modern glassmorphism design with responsive layout
-- Enhanced college header with institutional branding
-- Interactive sections: About, Events, Gallery, Team, Partners
-- Video background hero section
-- Smooth animations and dark theme
-- Mobile-first responsive design
+### 🌟 Key Highlights
+- **Premium Glassmorphism UI:** Optimized for cinematic video backgrounds with deep backdrop blurs (40px) and technical glow effects.
+- **Dual-Chapter System:** Seamlessly toggle between Chapter 1 (Legacy) and Chapter 2 (New Era) team configurations.
+- **Dynamic Event Tracking:** Real-time updates for upcoming workshops, hackathons, and placement sessions.
+- **Developer-Centric Design:** Built with modern tools like TypeScript, Shadcn UI, and Lucide icons for a technical aesthetic.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React 18, TypeScript, Vite
+### Core Technologies
+- **Frontend Framework:** React 18
+- **Language:** TypeScript
+- **Build Tool:** Vite 5
 - **Styling:** Tailwind CSS
-- **UI Components:** Radix UI, Shadcn UI
+
+### UI Components & Icons
+- **UI Library:** Shadcn UI (Radix UI)
 - **Icons:** Lucide React
-- **Routing:** React Router
+- **Animations:** Custom Tailwind Keyframes (`shimmer`, `scan`, `float`)
+
+---
+
+## 📁 Project Structure
+
+```bash
+DDSC-main/
+├── src/
+│   ├── components/      # Reusable React components
+│   │   ├── layout/      # Navbar, Footer, Background Video
+│   │   ├── sections/    # Homepage sections (Hero, Team, About, etc.)
+│   │   └── ui/          # Shadcn UI primitive components
+│   ├── data/            # Static data (Team, Events, Achievements)
+│   ├── hooks/           # Custom React hooks
+│   ├── pages/           # Main route pages
+│   └── lib/             # Utilities and configurations
+├── public/              # Static assets (Images, Logos)
+└── tailwind.config.ts   # Custom theme and animation configuration
+```
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js v18+
-- npm v9+
+- **Node.js**: v22.x or higher
+- **npm**: v9.x or higher
 
 ### Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/SyedAsif7/DDSC-main.git
-cd DDSC-main
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-The site will be available at `http://localhost:5173`
-
-### Build for Production
-
-```bash
-npm run build
-```
+2. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   Access the site at `http://localhost:5173`.
 
 ---
 
-## 📁 Project Structure
+## 📝 Available Scripts
 
-```
-src/
-├── components/      # Reusable UI components
-│   ├── layout/      # Layout components (Header, Footer, Navbar)
-│   ├── sections/    # Homepage sections
-│   └── ui/          # Base UI components (shadcn)
-├── data/            # Static data (achievements, team, etc.)
-├── hooks/           # Custom React hooks
-├── pages/           # Page components
-└── lib/             # Utility functions
-```
+| Command | Action |
+| :--- | :--- |
+| `npm run dev` | Starts the development server |
+| `npm run build` | Builds the project for production |
+| `npm run preview` | Previews the production build locally |
+| `npm run lint` | Runs ESLint to check for code issues |
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! Whether it's fixing bugs, adding new features, or improving documentation.
+We welcome all contributions! Whether you're fixing a bug or suggesting a new feature:
+1. **Fork** the repository.
+2. Create a **Feature Branch** (`git checkout -b feature/AmazingFeature`).
+3. **Commit** your changes (`git commit -m 'Add AmazingFeature'`).
+4. **Push** to the branch (`git push origin feature/AmazingFeature`).
+5. Open a **Pull Request**.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+---
+
+## 👨‍💻 Developer & Lead
+
+**Syed Asif**  
+*Lead Developer & Technical Architect*
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/the-syed-asif)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/SyedAsif7)
 
 ---
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
----
-
-## 📞 Contact
-
-DCode Developers Club - [@ndc_tech](https://twitter.com/ndc_tech)
-
-Project Link: [https://github.com/SyedAsif7/DDSC-main](https://github.com/SyedAsif7/DDSC-main)
+This project is licensed under the **MIT License**. See the `LICENSE` file for more details.

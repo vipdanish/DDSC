@@ -10,7 +10,7 @@ const PartnersSection = () => {
     {
       name: "Shri Shivaji Institute of Engineering and Management Studies",
       description: "Our official academic partner providing resources, spaces, and academic support for the club's activities and growth.",
-      logo: "/lovable-uploads/8f2aac09-11e4-414a-929d-997fd9338097.png",
+      logo: "lovable-uploads/8f2aac09-11e4-414a-929d-997fd9338097.png",
       label: "Official Academic Partner",
       labelColor: theme === 'light' ? "text-blue-700" : "text-ndc-blue",
       website: "https://ssiems.org.in/"
@@ -18,7 +18,7 @@ const PartnersSection = () => {
     {
       name: "GDG on Campus PES College of Engineering - Aurangabad, India",
       description: "Supporting our technical events and providing access to Google technologies and resources for our student community.",
-      logo: "/lovable-uploads/a962026c-ed9f-4509-9ff7-86ec7bad35d9.png",
+      logo: "lovable-uploads/a962026c-ed9f-4509-9ff7-86ec7bad35d9.png",
       label: "Technical Community Partner",
       labelColor: theme === 'light' ? "text-green-700" : "text-ndc-green",
       website: "https://gdsc.community.dev/"
@@ -26,7 +26,7 @@ const PartnersSection = () => {
     {
       name: "Kotlin User Group - Sambhajinagar (Aurangabad)",
       description: "A vibrant community of developers and enthusiasts passionate about Kotlin and its ecosystem.",
-      logo: "/lovable-uploads/41ae9005-9437-499b-8302-f5546c3214e0.png",
+      logo: "lovable-uploads/41ae9005-9437-499b-8302-f5546c3214e0.png",
       label: "Technical Community Partner",
       labelColor: theme === 'light' ? "text-purple-700" : "text-ndc-purple",
       website: "https://kotlinlang.org/community/"
@@ -34,7 +34,7 @@ const PartnersSection = () => {
     {
       name: "Women Techmakers Aurangabad (Chh. Sambhajinagar)",
       description: "Providing visibility, community, and resources for women in technology to drive innovation and participation.",
-      logo: "/lovable-uploads/41ae9005-9437-499b-8302-f5546c3214e0.png",
+      logo: "lovable-uploads/41ae9005-9437-499b-8302-f5546c3214e0.png",
       label: "Diversity & Inclusion Partner",
       labelColor: theme === 'light' ? "text-blue-700" : "text-ndc-blue",
       website: "https://www.womentechmakers.com/"

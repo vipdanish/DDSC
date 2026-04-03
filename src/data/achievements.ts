@@ -44,10 +44,10 @@ export const achievements: Achievement[] = [
     description: "Successfully organized to strengthen students’ preparation for the national SIH 2025 competition.",
     fullDescription: "The SIH Internal Hackathon was successfully conducted on 20 September 2025 at SSIEMS, Parbhani. A total of 90 students from 15 teams participated, presenting innovative projects across various national themes. The event served as a critical platform for real-world problem-solving experience, teamwork, and prototype development, resulting in the selection of 8 elite teams for the national stage.",
     images: [
-      "/images/competition/SIH Internal Hackathon images/SIH 1.jpg",
-      "/images/competition/SIH Internal Hackathon images/SIH 2.jpg",
-      "/images/competition/SIH Internal Hackathon images/SIH 3.jpg",
-      "/images/competition/SIH Internal Hackathon images/SIH 4.jpg"
+      "images/competition/SIH Internal Hackathon images/SIH 1.jpg",
+      "images/competition/SIH Internal Hackathon images/SIH 2.jpg",
+      "images/competition/SIH Internal Hackathon images/SIH 3.jpg",
+      "images/competition/SIH Internal Hackathon images/SIH 4.jpg"
     ],
     icon: 'code',
     stats: [
@@ -134,8 +134,8 @@ export const achievements: Achievement[] = [
     description: "Remarkable success at Asia's largest technical festival, securing a top national rank.",
     fullDescription: "SSIEMS students achieved outstanding success at TECHFEST 2025, organized by Rajalakshmi Institute of Technology, Chennai. Syed Asif secured the 4th rank in the Code Code Competition, while the Line Follower Robot team directly qualified for the final round. The students effectively applied their skills in robotics, coding, and automation under the dedicated guidance of college professors.",
     images: [
-      "/images/competition/Techfest images/Techfest zonal codecode.jpg",
-      "/images/competition/Techfest images/Techfest zonal linefollower.jpg"
+      "images/competition/Techfest images/Techfest zonal codecode.jpg",
+      "images/competition/Techfest images/Techfest zonal linefollower.jpg"
     ],
     icon: 'cpu',
     stats: [
@@ -174,7 +174,7 @@ export const achievements: Achievement[] = [
     description: "Successful qualification of 14 SSIEMS students in the national-level Round 1.",
     fullDescription: "SSIEMS students showed remarkable participation in the national-level Hackathon 2025 organized by EC Learnix. Competing against thousands of students from across the country, our 14-member squad successfully completed Round 1 based on their coding, innovation, and problem-solving abilities, proving the technical excellence of our institution.",
     images: [
-      "/images/competition/eclearnix hackathon 360 images/eclearnix hackathon 360.png"
+      "images/competition/eclearnix hackathon 360 images/eclearnix hackathon 360.png"
     ],
     icon: 'zap',
     stats: [
@@ -223,8 +223,8 @@ export const achievements: Achievement[] = [
     description: "Comprehensive guidance on the SIH 2025 process, from initial idea generation to prototype development for all technical branches.",
     fullDescription: "A highly successful one-day workshop on Smart India Hackathon (SIH) 2025 was organized at SSIEMS to prepare students for the national stage. This multidisciplinary event brought together students from CSE, ECE, EEE, Civil, and Mechanical branches, providing deep dives into problem analysis, Design Thinking, and MVP development. Led by Syed Asif and Rajesh Kumbhar, the session focused on transforming innovative ideas into functional prototypes.",
     images: [
-      "/images/competition/SIH One Day Workshop images/Workshop conducted for Sih 1.jpg",
-      "/images/competition/SIH One Day Workshop images/Workshop conducted for Sih 2.jpg"
+      "images/competition/SIH One Day Workshop images/Workshop conducted for Sih 1.jpg",
+      "images/competition/SIH One Day Workshop images/Workshop conducted for Sih 2.jpg"
     ],
     icon: 'terminal',
     stats: [
